@@ -1,0 +1,71 @@
+<div class="app-content module-wrap">
+	<div class="module">
+		<div class="module-inner">
+			<p class="inst">总体概览</p>
+			<div class="module-chart clear">
+				<div class="module-left mb20">
+					<p class="chart-title">休闲男装销售趋势图</p>
+					<div id="index_sale" class="mt10"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">休闲男装访问量分析</p>
+					<div id="index_view" class="mt10"></div>
+				</div>
+				<div class="area mb20">
+					<p class="chart-title">休闲男装访问量分析</p>
+					<div id="index_area"></div>
+				</div>
+				<div class="module-left mb10">
+					<p class="inst mb0">休闲男装热销产品</p>
+					<table class="table head">
+						<tbody>
+							<tr>
+								<td width="4px"></td>
+								<td width="50px">排名</td>
+								<td width="100px">图片</td>
+								<td>标题</td>
+								<td width="80px">产品画像</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="hotPro">
+						<table class="table">
+							<tbody>
+								<tr ng-repeat="pro in hotProList" ng-class="{'bt_n':$index==0}">
+									<td width="4px"></td>
+									<td width="50px">{{$index+1}}</td>
+									<td width="100px"><img ng-src="{{pro.pic}}"></td>
+									<td><span class="text_hidden">{{pro.title}}</span></td>
+									<td width="80px" style="cursor: pointer;color: #00c4c2" ng-click="toDetail(pro.id)">查看</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="module-right mb10">
+					<p class="inst mb0">休闲男装热销品牌</p>
+					<table class="table head">
+						<tbody>
+							<tr>
+								<td width="4px"></td>
+								<td width="100px">排名</td>
+								<td>品牌</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="hotBrand">
+						<table class="table">
+							<tbody>
+								<tr ng-repeat="brand in hotBrandList track by $index" ng-class="{'bt_n':$index==0}">
+									<td width="4px"></td>
+									<td width="100px">{{$index+1}}</td>
+									<td ng-click="search(brand)" style="cursor: pointer;">{{brand}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

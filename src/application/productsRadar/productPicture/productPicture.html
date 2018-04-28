@@ -1,0 +1,80 @@
+<div class="app-content wrapper">
+  <div class="mainbox">
+     <div class="first_content">
+        <div class="flash_pic">
+          <div class="_span">
+            <div class="bar"  ng-click="toleftProduct()" >
+              <span class="glyphicon glyphicon-menu-left"></span>
+            </div>
+          </div>
+          <div class="pic_exchange">
+            <ul class="clear">
+                <li ng-repeat="info in topData.picTopShow">
+                  <img width="108" height="108" ng-src='http://img10.360buyimg.com/n0/{{info.pic}}' ng-click="chooseTopPic(info.id)"/>
+                </li>
+            </ul>
+          </div>
+          <div class="_span " style="right:0px;top:0;" >
+            <div class="bar" style="margin-left:-3px;" ng-click="toRightProduct()">
+              <span class="glyphicon glyphicon-menu-right"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product_show clear">
+              <div class="pic_show">
+                 <img width="350" height="350" ng-src='{{productShowPic}}'/>
+                 <div class="toggle_pic">
+                    <span class="glyphicon glyphicon-menu-left toggle_pic_left" ng-click="toLeftPic()"></span>
+                        <div class="toggle_pic_show">
+                            <ul class="clear">
+                               <li ng-repeat="info in picShowData"><img width="50" height="50" ng-src='{{info.src}}' ng-click="changePic($index)"/></li>
+                            </ul>
+                        </div>
+                    <span class="glyphicon glyphicon-menu-right toggle_pic_right" ng-click="toRightPic()"></span>
+                 </div>
+             </div>
+             <div class="product_info">
+                 <div class="right_content">
+                      <div class="product_name">{{product_title}}</div>
+                      <div class="product_standard">产品规格 : </div>
+                      <div class="product_details">
+                          <div class="left_property">
+                              <span ng-repeat="item in propertyLeftData">
+                                 <label>{{item.name}} ：{{item.content}}</label>
+                              </span>
+                          </div>
+                          <div class="right_property">
+                              <span ng-repeat="item in propertyRightData">
+                                 <label>{{item.name}} ：{{item.content}}</label>
+                              </span>
+                          </div>
+                      </div>
+                 </div>
+             </div>
+        </div>
+      </div>
+   </div>
+    <div class="module">
+        <div class="module-inner">
+            <p class="inst">产品画像</p>
+            <div class="module-chart clear">
+                <div class="top_chart mb20" id="market_index"></div>
+                <div class="module-left mb20">
+                    <p class="chart-title">产品年度销量</p>
+                    <div id="product_year_sale"></div>
+                </div>
+                <div class="module-right mb20">
+                    <p class="chart-title">销售区域占比</p>
+                    <div id="sale_area_mix"></div>
+                </div>
+                <div class="module-right mb10" style="width: 100%;">
+                    <p class="chart-title">产品年度销量-按区域</p>
+                    <div id="product_year_sale_area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="hideImg" class="app-content hideCover" style="height:2500px">
+    <img src="./img/hua.gif">
+</div>

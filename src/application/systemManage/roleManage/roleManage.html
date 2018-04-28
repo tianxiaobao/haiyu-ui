@@ -1,0 +1,64 @@
+<div class="app-content module-wrap sysManage">
+<div class="addRole-wrap">
+	<div class="addRole">
+		<button class="btn" ng-click="editRole(false)" type="button">添加角色</button>
+	</div>
+	<system-show id="ROrepertory">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th width="20px"></th>
+				<th>序号</th>
+				<th>角色名</th>
+				<th>描述</th>
+				<th>创建时间</th>
+				<th style="width: 100px;">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in ROrepertory.data|limitTo:ROrepertory.pageSize.number:ROrepertory.startLimit">
+				<td width="20px"></td>
+				<td>{{$index+1}}</td>
+				<td>{{data.name}}</td>
+				<td>{{data.description}}</td>
+				<td>{{data.createTime}}</td>
+				<td class="operarion">
+					<span ng-click="editRole(true,$index)" class="edit">编辑</span>
+					<span ng-click="delRole(data.id)" class="del">删除</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</system-show>
+</div>
+</div>
+<!-- 弹出层 -->
+<div class="popup roleEditLayer" style="display:none;">
+	<div class="layer-content">
+		<ul class="listItem">
+			<li>
+				<span class="formSpan">角色名</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.name}" type="text" ng-model="role.name" placeholder="Name">
+				<p class="new-tips" ng-if="match.name">角色名不能为空</p>
+			</li>
+			<li>
+				<span class="formSpan">描述</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.description}" type="text" ng-model="role.description" placeholder="Description">
+				<p class="new-tips" ng-if="match.description">描述不能为空</p>
+			</li>
+			<li ng-repeat="perm in permList" ng-init="outerIndex = $index" ng-if="perm.name!='首页'">
+				<span class="formSpan">{{perm.name}}</span>
+				<div class="itemFather">
+					<span ng-repeat="child in perm.child" class="item">
+					<i class="check" ng-click="checkInput(outerIndex,$index)" ng-class="{'checked':child.check}"></i>{{child.name}}
+					</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="popup roleDelLayer" style="display:none;">
+	<div class="layer-content">
+		确认删除吗？
+	</div>
+</div>

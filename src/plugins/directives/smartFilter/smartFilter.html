@@ -1,0 +1,35 @@
+<div class="filter">
+	<span class="title">品类 ：</span>
+	<div class="select-box">
+		<div class="dropdown-btn" ng-click="toggleDrop($event)"><span class="select-value">{{selectedCate.name}}</span><i class="arr"></i></div>
+		<div class="dropdown-list">
+			<ul>
+				<li ng-repeat="cate in cateList" ng-click="changeCate($index)">
+					<a href="javascript:;">{{cate.name}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<span class="title">时间 ：</span>
+	<div class="select-box">
+		<div class="dropdown-btn" ng-click="toggleDrop($event)"><span class="select-value">{{selectedYear.value}}</span><i class="arr"></i></div>
+		<div class="dropdown-list">
+			<ul>
+				<li ng-repeat="year in yearList" ng-click="changeYear($index)">
+					<a href="javascript:;">{{year.value}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<span class="title">季度 ：</span>
+	<div class="select-box">
+		<div class="dropdown-btn" ng-click="toggleDrop($event)"><span class="select-value">{{selectedSeason.value}}</span><i class="arr"></i></div>
+		<div class="dropdown-list">
+			<ul>
+				<li ng-repeat="season in seasonList" ng-click="changeSeason($index)">
+					<a href="javascript:;">{{season.value}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

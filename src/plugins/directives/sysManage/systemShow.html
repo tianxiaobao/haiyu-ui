@@ -1,0 +1,14 @@
+<div ng-transclude></div>
+<div class="systemShow-footer clear">
+	<div class="systemShow-pagination">
+		<ul class="pagination" ng-click="systemShow.pageflip()">
+			<li ng-class="{true:'disabled'}[systemShow.currentPage==1]"><a ng-click="flip(1)">首页</a></li>
+			<li ng-class="{true:'disabled'}[systemShow.currentPage==1]"><a ng-click="flip(systemShow.currentPage-1)">上一页</a></li>
+			<li ng-repeat="page in systemShow.pages" ng-class="{true:'active'}[systemShow.currentPage==page]">
+				<a ng-click="flip(page)">{{ page }}</a>
+			</li>
+			<li ng-class="{true:'disabled'}[systemShow.currentPage==systemShow.totalPage]"><a ng-click="flip(systemShow.currentPage+1)">下一页</a></li>
+			<li ng-class="{true:'disabled'}[systemShow.currentPage==systemShow.totalPage]"><a ng-click="flip(systemShow.totalPage)">末页</a></li>
+		</ul>
+	</div>
+</div>

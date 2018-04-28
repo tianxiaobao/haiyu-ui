@@ -1,0 +1,180 @@
+.mainbox{
+	background: white;
+	margin-bottom: 20px;
+}
+.first_content{
+	border:1px #e4e4e4 solid;
+}
+.first_content .flash_pic{
+	overflow: hidden;
+	position: relative;
+}
+.first_content .flash_pic ._span{
+	position: absolute;
+	height: 100%;
+	width: 30px;
+	font-size: 26px;
+	background: white;
+}
+.first_content .flash_pic ._span .bar{
+	height: 50%;
+	position: absolute;
+	top:30%;
+	height: 60px;
+	width: 28px;
+	margin-left:4px;
+	background: black;
+	padding-top: 15px;
+	opacity: 0.2;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.first_content .flash_pic ._span .bar:hover{
+	opacity: 0.3
+}
+.first_content .flash_pic ._span .bar span{
+	color: white;
+	font-weight: 200;
+}
+.first_content .flash_pic .pic_exchange{
+    overflow: hidden;
+    margin: 30px auto;
+}
+.first_content .flash_pic ul{
+	overflow: hidden;
+	margin-left: -10px;
+	padding-left: 0px;
+	margin-bottom: 0;
+}
+.first_content .flash_pic ul li{
+	border:1px white solid;
+	float: left;
+	margin-left: 10px;
+}
+.first_content .flash_pic ul li:hover{
+	cursor: pointer;
+	border:1px solid #00c4c2;
+}
+.line{
+	border-bottom: 1px #e4e4e4 solid;
+	width: 100%;
+	margin-top:25px;
+	margin-bottom: 15px;
+}
+.product_show .pic_show{
+	position:relative;
+    float:left;
+    margin-right:-400px;
+	width: 400px;
+	height: 440px;
+}
+.product_show .pic_show img{
+	margin-left: 50px;
+	border: 1px #dae2e9 solid;
+}
+.product_show .pic_show .toggle_pic{
+	width: 350px;
+	margin-left: 50px;
+	height: 70px;
+}
+.product_show .pic_show .toggle_pic{
+	position: relative;
+}
+.product_show .pic_show .toggle_pic .toggle_pic_show{
+	position: absolute;
+	left: 20px;
+	top:10px;
+	overflow: hidden;
+}
+.product_show .pic_show .toggle_pic .toggle_pic_show img{
+	margin-left: 10px;
+	border: 1px #dae2e9 solid;
+}
+.product_show .pic_show .toggle_pic .toggle_pic_left{
+	position: absolute;
+	left: 0;
+	top:20px;
+	font-size: 30px;
+	color: #E5E5E5;
+}
+.product_show .pic_show .toggle_pic .toggle_pic_right{
+	position: absolute;
+	right:0;
+	top:20px;
+	font-size: 30px;
+	color: #E5E5E5
+}
+.product_show .pic_show .toggle_pic ul{
+	padding-left: 0;
+}
+.product_show .pic_show .toggle_pic img:hover{
+	border:1px solid #00c4c2;
+}
+.product_show .pic_show .toggle_pic li{
+	float: left
+}
+.product_show .pic_show .toggle_pic span:hover{
+	cursor: pointer;
+	color: #D6D6D6;
+}
+.product_show .product_info{
+    float:right;
+    width:100%;
+}
+.product_show .product_info .right_content{
+    margin-left:440px;/* 数值核心3 */
+    height: 460px;
+ }
+.product_show .product_info .right_content .product_details{
+	position: relative;
+}
+.product_show .product_info .right_content .product_details label{
+	font-weight: 500;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.product_show .product_info .right_content .product_name{
+	font-size: 14px;
+	font-weight: 500;
+	margin: 10px 0 40px 0;
+	margin-left: 0;
+	font-family:"microsoft yahei";
+	font-weight: bold;
+}
+.product_show .product_info .right_content .product_standard{
+	font-weight: bold;
+}
+.right_content .product_details .left_property{
+	position: absolute;
+	top:15px;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+	padding-right:30px;
+}
+.right_content .product_details .left_property span{
+	margin: 2px;
+}
+.right_content .product_details .right_property{
+	position: absolute;
+	right: 0px;
+	top:15px;
+	width: 50%;
+	height: 100%；
+}
+.product_details span{
+	display: block;
+	font-size: 14px;
+	margin: 2px;
+}
+#market_index{
+	height: 390px;
+	border: 1px solid #dae2e9;
+}
+#product_year_sale,#product_year_sale_area,#sale_area_mix{
+	height: 320px;
+}
+.hideCover img{
+	margin: 25% 50%;
+}

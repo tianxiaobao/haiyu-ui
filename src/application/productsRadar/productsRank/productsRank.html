@@ -1,0 +1,26 @@
+<div class="app-content wrapper">
+    <div class="content_title">热门商品排行榜(Top 10)</div>
+	<div class="content">
+        <div class="products_top_show">
+        	<div class="product_indicate">
+        		<ul>
+        			<li ng-repeat="data in flagImgData" ng-class="{'active':activeId==data.id}">
+                        <span ng-click="chooseProduct(data.id,data.cateId)">{{data.type}}</span>
+                    </li>
+        		</ul>
+        	</div>
+        </div>
+        <div class="products_detail_show">
+            <ul class="the_ul">
+            	<li ng-repeat="data in productsRank_data" ng-click="toDetail(data.id)" title="{{data.title}}">
+            		<div class="img_show">
+            			<img width="100%" height="100%" ng-src="http://img10.360buyimg.com/n0/{{data.pic}}" alt="图片获取错误" title="{{data.title}}">
+            		</div>
+            		<div class="pic_title">
+            		   {{data.title}}
+            		</div>
+            	</li>
+            </ul>
+	    </div>
+	</div>
+</div>

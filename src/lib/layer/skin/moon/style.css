@@ -1,0 +1,168 @@
+﻿/*
+ * layer皮肤
+ * 作者：一☆隐☆一
+ * QQ:9073194
+ * 请保留这里的信息 谢谢！虽然你不保留我也不能把你怎么样！
+ */
+
+html #layui_layer_skinmoonstylecss {
+	display: none;
+	position: absolute;
+	width: 1989px;
+}
+body .layer-ext-moon[type="dialog"] {
+	min-width: 320px;
+}
+body .layer-ext-moon-msg[type="dialog"]{min-width:200px;}
+body .layer-ext-moon .layui-layer-title {
+	background: #f4f4f4;
+	color: #666;
+	font-size: 16px;
+	font-weight: normal;
+	height: 48px;
+	line-height: 48px;
+	border-bottom:none;
+	padding:0 80px 0 24px;
+}
+
+
+
+body .layer-ext-moon .layui-layer-content .layui-layer-ico {
+	height: 32px;
+	width: 32px;
+	top:18.5px;
+}
+body .layer-ext-moon .layui-layer-ico0 {
+	background: url(default.png) no-repeat -96px 0;
+	;
+}
+body .layer-ext-moon .layui-layer-ico1 {
+	background: url(default.png) no-repeat -224px 0;
+	;
+}
+body .layer-ext-moon .layui-layer-ico2 {
+	background: url(default.png) no-repeat -192px 0;
+}
+body .layer-ext-moon .layui-layer-ico3 {
+	background: url(default.png) no-repeat -160px 0;
+}
+body .layer-ext-moon .layui-layer-ico4 {
+	background: url(default.png) no-repeat -320px 0;
+}
+body .layer-ext-moon .layui-layer-ico5 {
+	background: url(default.png) no-repeat -288px 0;
+}
+body .layer-ext-moon .layui-layer-ico6 {
+	background: url(default.png) -256px 0;
+}
+body .layer-ext-moon .layui-layer-ico7 {
+	background: url(default.png) no-repeat -128px 0;
+}
+body .layer-ext-moon .layui-layer-setwin {
+	top: 18px;
+	right: 24px;
+}
+body .layer-ext-moon .layui-layer-setwin a {
+	width: 13px;
+	height: 13px;
+}
+body .layer-ext-moon .layui-layer-setwin .layui-layer-min cite:hover {
+	background-color: #56abe4;
+}
+body .layer-ext-moon .layui-layer-setwin .layui-layer-max {
+	background: url(default.png) no-repeat -80px 0;
+}
+body .layer-ext-moon .layui-layer-setwin .layui-layer-max:hover {
+	background: url(default.png) no-repeat -64px 0;
+}
+body .layer-ext-moon .layui-layer-setwin .layui-layer-maxmin {
+	background: url(default.png) no-repeat -32px 0;
+}
+body .layer-ext-moon .layui-layer-setwin .layui-layer-maxmin:hover {
+	background: url(default.png) no-repeat -16px 0;
+}
+body .layer-ext-moon .layui-layer-setwin .layui-layer-close1,body .layer-ext-moon .layui-layer-setwin .layui-layer-close2 {
+	background: url(default.png) 0 -30px;
+}
+body .layer-ext-moon .layui-layer-setwin .layui-layer-close1:hover,body .layer-ext-moon .layui-layer-setwin .layui-layer-close2:hover {
+	background: url(default.png) -25px -30px;
+}
+body .layer-ext-moon .layui-layer-padding{padding-top: 24px;}
+body .layer-ext-moon .layui-layer-btn {
+	padding: 10px 18px;
+	background: #f4f4f4;
+	border-top: none;
+	text-align:right;
+}
+body .layer-ext-moon .layui-layer-btn a {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0 3px;
+	margin-right: 6px;
+	margin-left: 6px;
+	padding: 5px 31px;
+	color: #fff;
+	border: none;
+	background: #1c89c9;
+	border-radius: 4px;
+	display: inline-block;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	outline: none;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+body .layer-ext-moon .layui-layer-btn .layui-layer-btn0 {
+	background: #51d2b7;
+	border:1px solid #51d2b7;
+	float:right;
+}
+body .layer-ext-moon .layui-layer-btn .layui-layer-btn1 {
+	background: #fff;
+	border:1px solid #e8e8e8;
+	color: #2aafff;
+	border-radius: 4px;
+}
+body .layer-ext-moon .layui-layer-btn .layui-layer-btn2 {
+	background: #fff;
+	border:1px solid #e8e8e8;
+	color: #2aafff;
+	border-radius: 4px;
+}
+body .layer-ext-moon .layui-layer-btn .layui-layer-btn3 {
+	background: #f00;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+}
+
+body .layer-ext-moon .layui-layer-btn .layui-layer-btn4 {
+	background: #ccc;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor:not-allowed;
+}
+
+body .layer-ext-moon .layui-layer-title span.layui-layer-tabnow{
+	height:48px;
+}
+
+.layer-ext-moon{border:1px solid #e7e7e7;box-shadow:0 0 8px rgba(0,0,0,.1);}
+
+.layui-layer-tips .layui-layer-content{color: #333}
+body .control-tips{margin-top: -6px; border:0; -webkit-box-shadow:0 0 3px rgba(240, 240, 240, .5); -moz-box-shadow:0 0 3px rgba(240, 240, 240, .5); box-shadow:0 0 3px rgba(240, 240, 240, .5);}
+.control-tips .layui-layer-content{ box-shadow:none; border:1px solid #cecece; padding:3px 8px; word-break: break-all;}
+.control-tips i.layui-layer-TipsG{ display: none; position:static; border:0; width:auto; height:auto;}
+
+body .layer-ext-moon .layui-layer-btn .layui-layer-btn0.not-click {
+	background: #ccc;
+	border:1px solid #ccc;
+	cursor:not-allowed;
+	color:#666;
+}

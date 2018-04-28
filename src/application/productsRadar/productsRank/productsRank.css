@@ -1,0 +1,73 @@
+.content{
+	border:1px #dae2e9 solid;
+	overflow: hidden;
+	padding: 20px;
+	background: white
+}
+.content_title{
+	border: 1px solid #dae2e9;
+	border-bottom: none;
+    padding-left:20px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    background: #f3f7fb;
+}
+.content .products_top_show .product_indicate ul{
+	overflow: hidden;
+	margin:0;
+	padding: 0;
+	border-bottom: 1px solid #e1e6ec;
+}
+.content .products_top_show .product_indicate ul li{
+	height: 30px;
+	line-height: 30px;
+	margin-left: 0px;
+	float: left;
+}
+.content .products_top_show .product_indicate ul li span{
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 0 10px;
+}
+.content .products_top_show .product_indicate ul li:hover{
+	border-bottom:2px #00c4c2 solid;
+	color: #00c4c2;
+}
+.content .active{
+	border-bottom:2px #00c4c2 solid;
+	color: #00c4c2;
+}
+.content .products_detail_show{
+	width: 100%;
+}
+.content .products_detail_show ul{
+	padding: 0;
+	overflow: hidden;
+	margin-left: -1%;
+}
+.content .products_detail_show ul li{
+	margin-top: 15px;
+	width:19%;
+	border:1px #dae2e9 solid;
+	float: left;
+	margin-left: 1%;
+	padding: 0
+}
+.content .products_detail_show ul li:hover{
+	cursor: pointer;
+	border:1px #00c4c2 solid;
+}
+.products_detail_show .pic_title{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow : ellipsis;
+	font-size: 12px;
+	padding-left: 15px;
+	padding-right: 15px;
+	line-height: 45px;
+	height: 45px;
+}
+

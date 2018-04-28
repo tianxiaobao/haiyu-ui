@@ -1,0 +1,37 @@
+<div class="app-content module-wrap">
+	<div class="filter">
+		<span class="title">品类 ：</span>
+		<div class="select-box">
+			<div class="dropdown-btn" ng-click="toggleDrop($event)"><span class="select-value">{{selectedCate.name}}</span><i class="arr"></i></div>
+			<div class="dropdown-list">
+				<ul>
+					<li ng-repeat="cate in cateList" ng-click="changeCate($index)">
+						<a href="javascript:;">{{cate.name}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<span class="title">时间 ：</span>
+		<div class="select-box">
+			<div class="dropdown-btn" ng-click="toggleDrop($event)"><span class="select-value">{{selectedYear.value}}</span><i class="arr"></i></div>
+			<div class="dropdown-list">
+				<ul>
+					<li ng-repeat="year in yearList" ng-click="changeYear($index)">
+						<a href="javascript:;">{{year.value}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <div class="module mb10">
+		<div class="module-inner">
+		<p class="inst">关联分析</p>
+			<div class="module-chart clear">
+				<div class="associate_chart mb10">
+					<p class="chart-title">访问量、用户数、销售收入、销售区域关系分析</p>
+					<div id="relationship_analysis" style="height:410px"></div>
+				</div>
+			</div>
+	    </div>
+	</div>
+</div>

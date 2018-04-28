@@ -1,0 +1,28 @@
+#sexDis,
+#ageDis,
+#educationDis,
+#marryDis,
+#professionDis,
+#rfmDis,
+#userValDis,
+#actionType,
+#purchasDis,
+#medalDis,
+#cate1,
+#cate2,
+#cate3,
+#colorDis,
+#brandDis{
+	height: 275px;
+}
+.layer-content{
+	padding: 30px 40px;
+	text-align: left;
+}
+#upfile input{
+	width: 200px;
+	display: inline;
+}
+#upfile a{
+	color: #f00;
+}

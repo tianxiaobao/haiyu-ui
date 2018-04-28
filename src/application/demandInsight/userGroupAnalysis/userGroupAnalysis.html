@@ -1,0 +1,87 @@
+<div class="app-content module-wrap">
+	<smart-filter></smart-filter>
+	<div class="module">
+		<div class="module-inner">
+			<p class="inst">目标用户群体分析</p>
+			<div class="module-chart clear">
+				<div class="module-left mb20">
+					<p class="chart-title">性别分布</p>
+					<div id="sexDis"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">年龄分布</p>
+					<div id="ageDis"></div>
+				</div>
+				<div class="module-left mb20">
+					<p class="chart-title">学历分布</p>
+					<div id="educationDis"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">婚姻状况</p>
+					<div id="marryDis"></div>
+				</div>
+				<div class="module-left mb20">
+					<p class="chart-title">职业分布</p>
+					<div id="professionDis"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">服装品类RFM</p>
+					<div id="rfmDis"></div>
+				</div>
+				<div class="module-left mb20">
+					<p class="chart-title">用户价值分组</p>
+					<div id="userValDis"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">购物类型</p>
+					<div id="actionType"></div>
+				</div>
+				<div class="module-left mb20">
+					<p class="chart-title">购买力</p>
+					<div id="purchasDis"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">个护化妆</p>
+					<div id="medalDis"></div>
+				</div>
+				<div class="module-left mb20">
+					<p class="chart-title">一级品类TOP10偏好</p>
+					<div id="cate1"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">二级品类TOP10偏好</p>
+					<div id="cate2"></div>
+				</div>
+				<div class="module-left mb20">
+					<p class="chart-title">三级品类TOP10偏好</p>
+					<div id="cate3"></div>
+				</div>
+				<div class="module-right mb20">
+					<p class="chart-title">颜色TOP10偏好</p>
+					<div id="colorDis"></div>
+				</div>
+				<div class="module-left mb10">
+					<p class="chart-title">品牌TOP10偏好</p>
+					<div id="brandDis"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup uploadLayer" style="display:none;">
+	<div class="layer-content">
+		<p>当前没有自定义人群，请上传企业会员ID数据</p>
+		<p>ID文件要求：每行一个id字段数据，保存为CSV格式</p>
+		<form id="upfile">
+			<input type="file" name="file"><a href="/hy-view/static/id_样例.csv">模板下载：模板.csv</a>
+		</form>
+	</div>
+</div>
+
+<div class="popup successLayer" style="display:none;">
+	<div class="layer-content">
+		<p ng-show="upSuccess">系统将在2-3周内提供自定义人群的画像分析报告，敬请期待！</p>
+		<p ng-show="!upSuccess">请上传小于10M的CSV文件！</p>
+	</div>
+</div>

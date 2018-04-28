@@ -1,0 +1,24 @@
+<div class="productShow-head">
+	<div class="select_odds">
+		<ul class="clear">
+			<li ng-class="{'choosed':productShow.ischoosed_sale}" ng-click="productShow.saleSort()">销量</li>
+			<li ng-class="{'choosed':productShow.ischoosed_mark}" ng-click="productShow.markSort()">评论数</li>
+			<li ng-class="{'choosed':productShow.ischoosed_price}" ng-click="productShow.priceSort()">价格<span class="sort"></li>
+		</ul>
+	</div>
+</div>
+<div ng-transclude></div>
+<div  class="noResult" ng-if="!hasResult">抱歉，没有找到相关的产品</div>
+<div class="productShow-footer clear" ng-if="hasResult">
+	<div class="productShow-pagination">
+		<ul class="pagination" ng-click="productShow.pageflip()">
+			<li ng-class="{true:'disabled'}[productShow.currentPage==1]"><a ng-click="flip(1)">首页</a></li>
+			<li ng-class="{true:'disabled'}[productShow.currentPage==1]"><a ng-click="flip(productShow.currentPage-1)">上一页</a></li>
+			<li ng-repeat="page in productShow.pages" ng-class="{true:'active'}[productShow.currentPage==page]">
+				<a ng-click="flip(page)">{{ page }}</a>
+			</li>
+			<li ng-class="{true:'disabled'}[productShow.currentPage==productShow.totalPage]"><a ng-click="flip(productShow.currentPage+1)">下一页</a></li>
+			<li ng-class="{true:'disabled'}[productShow.currentPage==productShow.totalPage]"><a ng-click="flip(productShow.totalPage)">末页</a></li>
+		</ul>
+	</div>
+</div>

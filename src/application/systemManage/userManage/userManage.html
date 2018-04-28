@@ -1,0 +1,92 @@
+<div class="app-content module-wrap sysManage">
+<div class="addUser-wrap">
+	<div class="addUser">
+		<button class="btn" ng-click="editUser(false)" type="button">添加用户</button>
+	</div>
+	<system-show id="USrepertory">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th width="20px"></th>
+				<th>序号</th>
+				<th>登录名</th>
+				<th>邮箱</th>
+				<th>公司名称</th>
+				<th>电话</th>
+				<th>用户角色</th>
+				<th>状态</th>
+				<th>创建时间</th>
+				<th>最后更新时间</th>
+				<th style="width: 100px;">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in USrepertory.data|limitTo:USrepertory.pageSize.number:USrepertory.startLimit">
+				<td width="20px"></td>
+				<td>{{$index+1}}</td>
+				<td>{{data.username}}</td>
+				<td>{{data.email}}</td>
+				<td>{{data.company}}</td>
+				<td>{{data.phone}}</td>
+				<td>{{data.type_name}}</td>
+				<td>{{data.status}}</td>
+				<td>{{data.create_time}}</td>
+				<td>{{data.update_time}}</td>
+				<td class="operarion">
+					<span class="edit" ng-click="editUser(true,$index)">编辑</span>
+					<span class="del" ng-click="delUser(data.id)">删除</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</system-show>
+</div>
+</div>
+<!-- 弹出层 -->
+<div class="popup userEditLayer" style="display:none;">
+	<div class="layer-content">
+		<ul class="listItem">
+			<li>
+				<span class="formSpan">用户名</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.username}" type="text" ng-model="user.username" placeholder="Username" maxlength="50" :ng-disabled="editButton">
+				<p class="new-tips" ng-if="match.username">用户名不能为空</p>
+			</li>
+			<li>
+				<span class="formSpan">登录密码</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.password}" type="password" ng-model="user.password" placeholder="不能小于6位">
+				<p class="new-tips" ng-if="match.password">密码格式不正确</p>
+			</li>
+			<li>
+				<span class="formSpan">公司名称</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.company}" type="text" ng-model="user.company" placeholder="Company" maxlength="50">
+				<p class="new-tips" ng-if="match.company">公司名不能为空</p>
+			</li>
+			<li>
+				<span class="formSpan">邮箱</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.email}" type="text" ng-model="user.email" placeholder="Email">
+				<p class="new-tips" ng-if="match.email">邮箱格式不正确</p>
+			</li>
+			<li>
+				<span class="formSpan">电话</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.phone}" type="text" ng-model="user.phone" placeholder="Phone">
+				<p class="new-tips" ng-if="match.phone">电话格式不正确</p>
+			</li>
+		</ul>
+		<div class="select-box mb10">
+		<span class="formSelect">用户角色</span>
+			<div class="dropdown-btn" ng-click="toggleDrop($event)">
+				<span class="select-value">{{selectRole.name}}</span><i class="arr"></i>
+			</div>
+			<div class="dropdown-list">
+				<ul>
+					<li ng-repeat="role in roleList" ng-click="setRole($index)"><a href="javascript:;">{{role.name}}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup userDelLayer" style="display:none;">
+	<div class="layer-content">
+		确认删除吗？
+	</div>
+</div>

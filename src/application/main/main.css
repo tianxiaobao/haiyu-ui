@@ -1,0 +1,56 @@
+#index_sale,
+#index_view
+{
+	height: 275px;
+}
+.chart-title label{
+	margin-bottom: 0;
+}
+.area{
+    float: left;
+    width: 100%;
+    border: 1px solid #dae2e9;
+}
+#index_area{
+    height: 450px;
+}
+#hotPro{
+    height: 350px;
+    overflow-y: auto;
+}
+#hotPro .table>tbody>tr>td{
+    height: 80px;
+    vertical-align: middle;
+}
+.text_hidden{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+    display: inline-block;
+}
+tr.bt_n>td{
+    border-top: none !important;
+}
+#hotPro img{
+    width: 60px;
+}
+.head.table>tbody>tr>td{
+    border-top: none;
+    border-bottom: 1px solid #dae2e9;
+    background: #f3f7fb;
+}
+#hotBrand{
+    height: 350px;
+    overflow-y: auto;
+}
+#hotBrand .table>tbody>tr>td{
+    height: 50px;
+    vertical-align: middle;
+}
+.table{
+    margin-bottom: 0;
+}
+.mb0{
+    margin-bottom: 0 !important;
+}

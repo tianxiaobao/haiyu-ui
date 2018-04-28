@@ -1,0 +1,91 @@
+<div class="app-content module-wrap sysManage">
+	<div class="addPerm">
+		<button class="btn" ng-click="editPerm(false)" type="button">添加权限</button>
+	</div>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th width="20px"></th>
+				<th>序号</th>
+				<th>标题</th>
+				<th>类型</th>
+				<th>地址</th>
+				<th>权限编码</th>
+				<th>描述</th>
+				<th style="width: 100px;">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="perm in permList">
+				<td width="20px"></td>
+				<td>{{$index+1}}</td>
+				<td>{{perm.title}}</td>
+				<td ng-if="perm.type==1">功能</td>
+				<td ng-if="perm.type==0">菜单</td>
+				<td>{{perm.url}}</td>
+				<td>{{perm.permCode}}</td>
+				<td>{{perm.description}}</td>
+				<td class="operarion">
+					<span class="edit" ng-click="editPerm(true,$index)">编辑</span>
+					<span class="del" ng-click="delPerm(perm.id)">删除</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- 弹出层 -->
+<div class="popup permEditLayer" style="display:none;">
+	<div class="layer-content">
+		<ul class="listItem">
+			<li>
+				<span class="formSpan">标题</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.title}" type="text" ng-model="perm.title" placeholder="Title">
+				<p class="new-tips" ng-if="match.title">标题不能为空</p>
+			</li>
+			<li>
+				<span class="formSpan">地址</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.url}" type="text" ng-model="perm.url" placeholder="Url">
+				<p class="new-tips" ng-if="match.url">地址不能为空</p>
+			</li>
+			<li>
+				<span class="formSpan">权限编码</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.permCode}" type="text" ng-model="perm.permCode" placeholder="permCode">
+				<p class="new-tips" ng-if="match.permCode">权限编码不能为空</p>
+			</li>
+			<li>
+				<span class="formSpan">描述</span>
+				<input class="inputMode" ng-class="{'itxt-error':match.description}" type="text" ng-model="perm.description" placeholder="Description">
+				<p class="new-tips" ng-if="match.description">描述不能为空</p>
+			</li>
+		</ul>
+		<div class="select-box mb20">
+		<span class="formSelect">类型</span>
+			<div class="dropdown-btn" ng-click="toggleDrop($event)">
+				<span class="select-value" ng-if="perm.type==0">菜单</span><i class="arr"></i>
+				<span class="select-value" ng-if="perm.type==1">功能</span><i class="arr"></i>
+			</div>
+			<div class="dropdown-list">
+				<ul>
+					<li ng-click="setType(0)"><a href="javascript:;">菜单</a></li>
+					<li ng-click="setType(1)"><a href="javascript:;">功能</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="select-box mb10">
+		<span class="formSelect">父节点</span>
+			<div class="dropdown-btn" ng-click="toggleDrop($event)">
+				<span class="select-value">{{selectPid.name}}</span><i class="arr"></i>
+			</div>
+			<div class="dropdown-list">
+				<ul>
+					<li ng-repeat="pid in pidList" ng-click="setFather($index)"><a href="javascript:;">{{pid.name}}</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup permDelLayer" style="display:none;">
+	<div class="layer-content">
+		确认删除吗？
+	</div>
+</div>

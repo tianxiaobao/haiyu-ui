@@ -1,0 +1,27 @@
+#brandProp,
+#crowdProp,
+#sizeProp,
+#priceProp,
+#materialProp,
+#colorProp,
+#styleProp,
+#typeProp{
+	height: 275px;
+}
+#mapArea{
+	height: 373px;
+}
+.table-module-right{
+	width: 49%;
+    float: right;
+}
+.table-module-right .table-bordered>thead>tr>th{
+	border-bottom-width:1px;
+}
+.table-module-right .table{
+	margin-bottom: 0;
+}
+.current{
+	background: #00c4c2 !important;
+    color: #fff;
+}

@@ -1,0 +1,29 @@
+<div class="smartSearch-header clear">
+	<a class="creatUserGroup" ui-sref="creatUserGroup">新建用户群</a>
+	<div class="searchKey">
+		<input placeholder="请输入名称搜索" ng-model="smartSearch.searchKey"/><span class="glyphicon glyphicon-search" ngclick="changeSearch()"></span>
+	</div>
+</div>
+<div ng-transclude></div>
+<div class="page-list">
+	<div class="page-total">
+		每页<select ng-options="pageSize.name for pageSize in smartSearch.pageSizes" ng-model="smartSearch.pageSize" ng-change="changePageSize(smartSearch.pageSize)"></select>显示{{smartSearch.from + 1}}到{{smartSearch.to}}条/共计{{smartSearch.count}}条
+	</div>
+	<ul class="pagination">
+		<li ng-class="{true:'disabled'}[smartSearch.currentPage==1]">
+			<a ng-click="flip(1)">首页</a>
+		</li>
+		<li ng-class="{true:'disabled'}[smartSearch.currentPage==1]">
+			<a ng-click="flip(smartSearch.currentPage-1)">上一页</a>
+		</li>
+		<li ng-repeat="page in smartSearch.pages" ng-class="{true:'active'}[smartSearch.currentPage==page]">
+			<a ng-click="flip(page)">{{ page }}</a>
+		</li>
+		<li ng-class="{true:'disabled'}[smartSearch.currentPage==smartSearch.totalPage]">
+			<a ng-click="flip(smartSearch.currentPage+1)">下一页</a>
+		</li>
+		<li ng-class="{true:'disabled'}[smartSearch.currentPage==smartSearch.totalPage]">
+			<a ng-click="flip(smartSearch.totalPage)">末页</a>
+		</li>
+	</ul>
+</div>

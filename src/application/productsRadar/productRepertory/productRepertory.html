@@ -1,0 +1,34 @@
+<div class="app-content wrapper">
+	<div class="search-wrap">
+		<div class="search">
+		    <div class="search_info">
+			    <input type="text" ng-focus="historyShow()" ng-model="inputInfo" ng-change="searchInfo()" ng-keypress="($event.which === 13)?search():0" />
+			    <div class="search_history" ng-style="displayHistory">
+			    	<ul class="clear">
+			    		<li ng-repeat="historyInfo in obj.historyInfoData|filter:Info|limitTo:10" ng-click="searchHistoryinfo(historyInfo)" >{{historyInfo.value}}</li>
+			    	</ul>
+			    </div>
+			</div>
+			<div class="submit" ng-click="search()">搜索</div>
+		</div>
+	</div>
+    <div class="the_content">
+		<div class="products">
+		    <product-show id="PSrepertory">
+			<div class="products_show">
+	            <ul class="the_ul">
+	            	<li ng-repeat="data in PSrepertory.data|limitTo:PSrepertory.pageSize.number:PSrepertory.startLimit" ng-click="toDetail(data.id)" title="{{data.title}}">
+	            		<div class="img_show">
+	            			<img width="100%" height="100%" ng-src="http://img1{{$index%5}}.360buyimg.com/n0/{{data.pic}}">
+	            		</div>
+	            		<div class="pic_title">
+	            		   {{data.title}}
+	            		</div>
+	            	</li>
+	            </ul>
+			</div>
+		    </product-show>
+		</div>
+	    </product-show>
+	</div>
+</div>

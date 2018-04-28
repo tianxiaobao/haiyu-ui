@@ -1,0 +1,13 @@
+<!--菜单开始 -->
+<div class="menu">
+	<ul class="menu-ul">
+		<li class="menu-ul-li" ng-repeat="item in menuList" ng-init="outerIndex = $index">
+			<a href="/hy-view{{item.url}}" ng-if="outerIndex==0" class="index" ng-class="{active: currentId == 0 && outerIndex == currentOutId}" ng-click="activeThis(0,outerIndex)"><img class="icon-left" ng-src="img/{{item.icon}}">{{item.title}}</a>
+			<a href="javascript:void(0)" ng-click="toggle($event)" ng-if="outerIndex!=0"><img class="icon-left" ng-src="img/{{item.icon}}">{{item.title}}<span class="arrow arrow-down"></span></a>
+			<ul class="menu-dropdown" ng-if="outerIndex!=0">
+				<li ng-repeat="v in item.mvList track by $index"><a ng-class="{active: currentId == $index && outerIndex == currentOutId}" ng-click="activeThis($index,outerIndex)" href="/hy-view{{v.url}}">{{v.title}}</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<!-- 菜单结束 -->

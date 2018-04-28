@@ -1,0 +1,36 @@
+#monthUserView,
+#monthPageView,
+#brandProp,
+#crowdProp,
+#sizeProp,
+#priceProp,
+#materialProp,
+#colorProp,
+#styleProp,
+#typeProp
+{
+	height: 275px;
+}
+#mapArea{
+	height: 393px;
+}
+.table-module-right{
+	width: 49%;
+    float: right;
+}
+.table-module-right .table-bordered>thead>tr>th{
+	border-bottom-width:1px;
+}
+.table-module-right .table{
+	margin-bottom: 0;
+}
+.hotword{
+	height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    background: #f3f7fb;
+    font-size: 14px;
+    margin-bottom: 0;
+    border: 1px solid #dae2e9;
+    border-bottom: 0;
+}
